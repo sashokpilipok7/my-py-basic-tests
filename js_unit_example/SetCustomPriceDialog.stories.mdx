@@ -1,0 +1,22 @@
+import { Story, Meta, Canvas } from '@storybook/addon-docs/blocks';
+
+import { pricesMock } from 'components/templates/ChangeEditPackageTemplate/ChangeEditPackageTemplate.mock';
+import SetCustomPriceDialog from './';
+
+export const Template = ({ ...args }) => <SetCustomPriceDialog {...args} />;
+
+<Meta title="organisms/SetCustomPriceDialog" component={SetCustomPriceDialog} />
+
+# SetCustomPriceDialog
+
+<Canvas>
+  <Story
+    name="default"
+    args={{
+      pricesList: pricesMock,
+      open: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
